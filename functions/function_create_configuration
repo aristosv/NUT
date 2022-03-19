@@ -1,0 +1,63 @@
+#!/bin/bash
+
+config_ups () {
+bash -c "cat > /etc/nut/ups.conf" << EOL
+pollinterval = 1
+maxretry = 3
+
+$(nut-scanner -U 2>/dev/null | grep nut)
+$(nut-scanner -U 2>/dev/null | grep driver)
+$(nut-scanner -U 2>/dev/null | grep port)
+$(nut-scanner -U 2>/dev/null | grep nut | sed 's/[][]//g')
+$(nut-scanner -U 2>/dev/null | grep vendorid)
+$(nut-scanner -U 2>/dev/null | grep productid)
+$(nut-scanner -U 2>/dev/null | grep serial)
+EOL
+}
+
+config_upsmon () {
+bash -c "cat > /etc/nut/upsmon.conf" << EOL
+RUN_AS_USER root
+MONITOR $(nut-scanner -U 2>/dev/null | grep nut | sed 's/[][]//g')@localhost 1 admin secret master
+EOL
+}
+
+config_upsd () {
+bash -c "cat > /etc/nut/upsd.conf" << EOL
+LISTEN 0.0.0.0 3493
+EOL
+}
+
+config_nut () {
+bash -c "cat > /etc/nut/nut.conf" << EOL
+MODE=netserver
+EOL
+}
+
+config_upsd_users () {
+bash -c "cat > /etc/nut/upsd.users" << EOL
+[monuser]
+ password = secret
+ admin master
+EOL
+}
+
+config_hosts () {
+bash -c "cat > /etc/nut/hosts.conf" << EOL
+MONITOR $(nut-scanner -U 2>/dev/null | grep nut | sed 's/[][]//g')@localhost $(nut-scanner -U 2>/dev/null | grep nut | sed 's/[][]//g')
+EOL
+}
+
+config_upsset () {
+bash -c "cat > /etc/nut/upsset.users" << EOL
+I_HAVE_SECURED_MY_CGI_DIRECTORY
+EOL
+}
+
+config_ups
+config_upsmon
+config_upsd
+config_nut
+config_upsd_users
+config_hosts
+config_upsset

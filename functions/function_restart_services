@@ -1,0 +1,13 @@
+#!/bin/bash
+
+restart_services () {
+systemctl restart nut-server
+systemctl restart nut-client
+systemctl restart nut-monitor
+upsdrvctl stop
+upsdrvctl start
+a2enmod cgi
+systemctl restart apache2
+}
+
+restart_services

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#variables
+parentdir=$(dirname "$(dirname "$(readlink -f -- "$0")")")
+
+echo installing prerequisites
+$parentdir/functions/function_install_prerequisites
+
+echo backing up configuration
+$parentdir/functions/function_backup_configuration
+
+echo creating configuration
+$parentdir/functions/function_create_configuration
+
+echo restarting services
+$parentdir/functions/function_restart_services

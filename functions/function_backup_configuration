@@ -1,0 +1,13 @@
+#!/bin/bash
+
+backup_config () {
+mv /etc/nut/ups.conf /etc/nut/ups.example.conf
+mv /etc/nut/upsmon.conf /etc/nut/upsmon.example.conf
+mv /etc/nut/upsd.conf /etc/nut/upsd.example.conf
+mv /etc/nut/nut.conf /etc/nut/nut.example.conf
+mv /etc/nut/upsd.users /etc/nut/upsd.example.users
+mv /etc/nut/hosts.conf /etc/nut/hosts.example.conf
+mv /etc/nut/upsset.conf /etc/nut/upsset.example.conf
+}
+
+backup_config

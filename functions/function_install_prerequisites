@@ -1,0 +1,12 @@
+#!/bin/bash
+
+install_packages () {
+for package in nut nut-client nut-server apache2 nut-cgi ; do
+ if ! dpkg -s $package >/dev/null 2>&1 ; then
+  echo installing $package
+  apt install -y $package > /dev/null 2>&1
+ fi
+done
+}
+
+install_packages

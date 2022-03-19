@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# variables
+parentdir=$(dirname "$(dirname "$(readlink -f -- "$0")")")
+
+system_permissions () {
+for directory in $(ls -d $parentdir/{functions,operations}) ; do
+ chmod +x $directory/*
+done
+}
+
+system_permissions
