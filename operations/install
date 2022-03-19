@@ -3,6 +3,9 @@
 #variables
 parentdir=$(dirname "$(dirname "$(readlink -f -- "$0")")")
 
+echo setting permissions
+bash $parentdir/functions/function_configure_permissions
+
 echo installing prerequisites
 $parentdir/functions/function_install_prerequisites
 
