@@ -23,3 +23,12 @@ run update script
 ```
 ~/network-ups-tools/operations/update
 ```
+
+## screenshots
+<p align="center">
+  <img width="600" height="487" src="https://raw.githubusercontent.com/aristosv/network-ups-tools/main/screenshots/web1.png">
+</p>
+
+<p align="center">
+  <img width="600" height="487" src="https://raw.githubusercontent.com/aristosv/network-ups-tools/main/screenshots/web2.png">
+</p>
