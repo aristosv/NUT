@@ -1,5 +1,9 @@
 # Network UPS Tools
 
+Network UPS Tools provides a common protocol and set of tools to monitor and manage UPS devices. For more information visit the project website.
+
+[![project website](https://networkupstools.org)](https://www.linux.org/ "Go to Linux homepage")
+
 This has been tested on a virtual machine running Debian 10. The UPS is physically connected on the ESXi server. A USB controller v2.0 and a USB device have been added.
 
 <p align="center">
