@@ -1,13 +1,26 @@
 #!/bin/bash
 
 restart_services () {
-systemctl restart nut-server
-systemctl restart nut-client
-systemctl restart nut-monitor
-upsdrvctl stop
-upsdrvctl start
-a2enmod cgi
-systemctl restart apache2
+echo restarting nut server
+systemctl restart nut-server > /dev/null 2>&1
+
+echo restarting nut client
+systemctl restart nut-client > /dev/null 2>&1
+
+echo restarting nut monitor
+systemctl restart nut-monitor > /dev/null 2>&1
+
+echo stopping upsdrvctl
+upsdrvctl stop > /dev/null 2>&1
+
+echo starting upsdrvctl
+upsdrvctl start > /dev/null 2>&1
+
+echo running a2enmod
+a2enmod cgi > /dev/null 2>&1
+
+echo restarting apache
+systemctl restart apache2 > /dev/null 2>&1
 }
 
 restart_services
