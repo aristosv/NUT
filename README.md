@@ -32,3 +32,7 @@ run update script
 <p align="center">
   <img width="800" height="453" src="https://raw.githubusercontent.com/aristosv/network-ups-tools/main/screenshots/web2.png">
 </p>
+
+<p align="center">
+  <img width="800" height="525" src="https://raw.githubusercontent.com/aristosv/network-ups-tools/main/screenshots/web3.png">
+</p>
