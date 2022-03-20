@@ -26,7 +26,7 @@ run update script
 
 ## screenshots
 <p align="center">
-  <img width="600" height="487" src="https://raw.githubusercontent.com/aristosv/network-ups-tools/main/screenshots/web1.png">
+  <img width="600" height="100" src="https://raw.githubusercontent.com/aristosv/network-ups-tools/main/screenshots/web1.png">
 </p>
 
 <p align="center">
