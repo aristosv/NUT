@@ -22,12 +22,6 @@ bash ~/network-ups-tools/operations/install
 http://computer_ip/cgi-bin/nut/upsstats.cgi
 ```
 
-## update
-run update script
-```
-~/network-ups-tools/operations/update
-```
-
 ## screenshots
 <p align="center">
   <img width="800" height="138" src="https://raw.githubusercontent.com/aristosv/network-ups-tools/main/screenshots/web1.png">
