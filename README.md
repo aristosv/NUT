@@ -1,5 +1,4 @@
-# NUT
-Network UPS Tools
+# Network UPS Tools
 
 This has been tested on a virtual machine running Debian 10. The UPS is physically connected on the ESXi server. A USB controller v2.0 and a USB device have been added.
 
