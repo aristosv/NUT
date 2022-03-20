@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# variables
+upscheck=$(upsc nutdev1@localhost ups.status 2>/dev/null)
+onpower=OL
+onbattery=OB
+
+if [[ "$upscheck" == *"$onpower"* ]] ; then
+ echo "UPS is on Power"
+fi
+
+if [[ "$upscheck" == *"$onbattery"* ]] ; then
+ echo "UPS is on Battery"
+fi
