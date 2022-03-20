@@ -2,7 +2,7 @@
 
 Network UPS Tools provides a common protocol and set of tools to monitor and manage UPS devices. For more information visit the [project website](https://networkupstools.org)
 
-It's not difficult to set everything up but it does require editing a lot of configuration files. This installer automates the setup and configuration process. I actually had to go through a [1 hour video](https://youtu.be/vyBP7wpN72c) to get the correct configuration.
+It's not difficult to set everything up but it does require editing a lot of configuration files. It does not work out of the box. This installer automates the setup and configuration process. I actually had to go through a [1 hour video](https://youtu.be/vyBP7wpN72c) to get the correct configuration.
 
 It has been tested on a virtual machine running Debian 10. The UPS is physically connected on the ESXi server. A USB controller v2.0 and a USB device have been added. This is my specific setup but it could easily be your computer with the UPS connected directly via USB.
 
