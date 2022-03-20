@@ -6,12 +6,12 @@ pollinterval = 1
 maxretry = 3
 
 $(nut-scanner -U 2>/dev/null | grep nut)
-$(nut-scanner -U 2>/dev/null | grep driver)
-$(nut-scanner -U 2>/dev/null | grep port)
-$(nut-scanner -U 2>/dev/null | grep nut | sed 's/[][]//g')
-$(nut-scanner -U 2>/dev/null | grep vendorid)
-$(nut-scanner -U 2>/dev/null | grep productid)
-$(nut-scanner -U 2>/dev/null | grep serial)
+ driver = $(nut-scanner -U 2>/dev/null | grep driver | cut -d\   -f3)
+ port = $(nut-scanner -U 2>/dev/null | grep port | cut -d\   -f3)
+ desc = "UPS"
+ vendorid = $(nut-scanner -U 2>/dev/null | grep vendorid | cut -d\   -f3)
+ productid = $(nut-scanner -U 2>/dev/null | grep productid | cut -d\   -f3)
+ serial = $(nut-scanner -U 2>/dev/null | grep serial | cut -d\   -f3)
 EOL
 }
 
