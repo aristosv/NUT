@@ -1,7 +1,7 @@
 # NUT
 Network UPS Tools
 
-This has been tested on a virtual machine running Debian 10. The UPS is physically connected on the ESXi server  using USB passthrough connected on an APC Back-UPS ES 850G2 UPS.
+This has been tested on a virtual machine running Debian 10. The UPS is physically connected on the ESXi server. A USB controller v2.0 and a USB device have been added.
 
 <p align="center">
   <img width="600" height="487" src="https://raw.githubusercontent.com/aristosv/network-ups-tools/main/screenshots/esxi-vmguest.png">
