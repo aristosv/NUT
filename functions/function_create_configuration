@@ -2,7 +2,7 @@
 
 config_ups () {
 bash -c "cat > /etc/nut/ups.conf" << EOL
-pollinterval = 1
+pollinterval = 15
 maxretry = 3
 
 $(nut-scanner -U 2>/dev/null | grep nut)
@@ -19,6 +19,8 @@ config_upsmon () {
 bash -c "cat > /etc/nut/upsmon.conf" << EOL
 RUN_AS_USER root
 MONITOR $(nut-scanner -U 2>/dev/null | grep nut | sed 's/[][]//g')@localhost 1 admin secret master
+DEADTIME 25
+MAXAGE 25
 EOL
 }
 
